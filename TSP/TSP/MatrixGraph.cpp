@@ -4,15 +4,17 @@
 MatrixGraph::MatrixGraph(unsigned num_nodes)
 {
 	num_edges = 0;
-	M = std::vector<std::vector<EdgeWeight> >();
+	M = std::vector<std::vector<EdgeWeight> >(num_nodes);
 	for (int i = 0; i < num_nodes; i++){
-		M.push_back(std::vector<EdgeWeight>(num_nodes));
+		M[i] = std::vector<EdgeWeight>(num_nodes);
+		for (int j = 0; j < num_nodes; j++){
+			M[i][j] = 0;
+		}
 	}
 }
 
-MatrixGraph::~MatrixGraph()
-{
-	delete &M;
+MatrixGraph::~MatrixGraph(){
+
 }
 
 void MatrixGraph::addEdge(NodeID u, NodeID v, EdgeWeight weight)
