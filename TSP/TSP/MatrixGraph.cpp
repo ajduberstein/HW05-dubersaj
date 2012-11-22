@@ -53,6 +53,12 @@ std::list<NWPair> MatrixGraph::getAdj(NodeID u) const
 	}
 }
 
+unsigned MatrixGraph::degree(NodeID u) const{
+	if (u >= 0 && u < M.size()){
+		return getAdj(u).size();
+	}
+}
+
 unsigned MatrixGraph::size() const
 {
 	return M.size();

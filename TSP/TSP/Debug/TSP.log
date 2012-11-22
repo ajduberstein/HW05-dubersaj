@@ -1,0 +1,32 @@
+﻿Build started 11/22/2012 10:55:22 AM.
+     1>Project "C:\Users\Stein\Documents\GitHub\HW05-dubersaj\TSP\TSP\TSP.vcxproj" on node 2 (build target(s)).
+     1>PrepareForBuild:
+         Creating directory "C:\Users\Stein\Documents\GitHub\HW05-dubersaj\TSP\Debug\".
+       InitializeBuildStatus:
+         Creating "Debug\TSP.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Controller.cpp HW05.cpp MatrixGraph.cpp StarbucksMap.cpp Tester.cpp
+         Tester.cpp
+         StarbucksMap.cpp
+         MatrixGraph.cpp
+     1>c:\users\stein\documents\github\hw05-dubersaj\tsp\tsp\matrixgraph.cpp(8): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\stein\documents\github\hw05-dubersaj\tsp\tsp\matrixgraph.cpp(42): warning C4018: '<' : signed/unsigned mismatch
+         HW05.cpp
+         Controller.cpp
+         Generating Code...
+     1>c:\users\stein\documents\github\hw05-dubersaj\tsp\tsp\matrixgraph.cpp(54): warning C4715: 'MatrixGraph::getAdj' : not all control paths return a value
+       Link:
+         c:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Stein\Documents\GitHub\HW05-dubersaj\TSP\Debug\TSP.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\TSP.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\Stein\Documents\GitHub\HW05-dubersaj\TSP\Debug\TSP.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Stein\Documents\GitHub\HW05-dubersaj\TSP\Debug\TSP.lib" /MACHINE:X86 Debug\Controller.obj
+         Debug\HW05.obj
+         Debug\MatrixGraph.obj
+         Debug\StarbucksMap.obj
+         Debug\Tester.obj
+     1>Controller.obj : error LNK2019: unresolved external symbol "public: __thiscall ListGraph::ListGraph(int)" (??0ListGraph@@QAE@H@Z) referenced in function "class Graph * __cdecl createStarbucksGraph(class std::vector<class Store,class std::allocator<class Store> >,bool)" (?createStarbucksGraph@@YAPAVGraph@@V?$vector@VStore@@V?$allocator@VStore@@@std@@@std@@_N@Z)
+     1>Tester.obj : error LNK2001: unresolved external symbol "public: __thiscall ListGraph::ListGraph(int)" (??0ListGraph@@QAE@H@Z)
+     1>MatrixGraph.obj : error LNK2001: unresolved external symbol "public: virtual unsigned int __thiscall MatrixGraph::degree(unsigned int)const " (?degree@MatrixGraph@@UBEII@Z)
+     1>C:\Users\Stein\Documents\GitHub\HW05-dubersaj\TSP\Debug\TSP.exe : fatal error LNK1120: 2 unresolved externals
+     1>Done Building Project "C:\Users\Stein\Documents\GitHub\HW05-dubersaj\TSP\TSP\TSP.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:08.87
