@@ -9,7 +9,7 @@ ListGraph::ListGraph(int numNodes){
 }
 
 ListGraph::~ListGraph(){
-	delete &edgeList;
+	//delete &edgeList;
 }
 
 
