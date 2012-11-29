@@ -9,7 +9,6 @@ ListGraph::ListGraph(int numNodes){
 }
 
 ListGraph::~ListGraph(){
-	//delete &edgeList;
 }
 
 
@@ -21,7 +20,6 @@ void ListGraph::addEdge(NodeID u, NodeID v, EdgeWeight weight){
 		//Validity check--No duplicates. Because of the symmetric relationship 
 		//of directed graphs, we should only have to test u, and not both u and v.
 		//Code for list iterator modified from http://www.cplusplus.com/forum/general/22957/
-		//TODO This would count as sorted--binary search might speed it up
 		for(std::list<NWPair>::const_iterator iterator = edgeList.at(u).begin(), end = edgeList.at(u).end(); iterator != end; ++iterator){
 			if(iterator->first == v && iterator->second == weight){
 				duplicate_exists = true;
@@ -49,9 +47,9 @@ EdgeWeight ListGraph::weight(NodeID u, NodeID v) const{
 
 std::list<NWPair> ListGraph::getAdj(NodeID u) const{
 	//Validity checks
-	if (u >= 0 && u < edgeList.size()){
+	//if (u >= 0 && u < edgeList.size()){
 			return edgeList.at(u);
-		}
+	//}
 }
 
 unsigned ListGraph::degree(NodeID u) const{
