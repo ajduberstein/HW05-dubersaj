@@ -61,7 +61,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Controller.cpp" />
-    <ClCompile Include="HW05.cpp" />
+    <ClCompile Include="GraphAlgs.cpp" />
     <ClCompile Include="ListGraph.cpp" />
     <ClCompile Include="MatrixGraph.cpp" />
     <ClCompile Include="StarbucksMap.cpp" />

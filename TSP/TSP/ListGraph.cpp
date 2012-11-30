@@ -12,7 +12,6 @@ ListGraph::~ListGraph(){
 }
 
 
-//TODO I think this method risks duplicates. Will need to deal with that.
 void ListGraph::addEdge(NodeID u, NodeID v, EdgeWeight weight){
 	bool duplicate_exists = false;
 	//Validity check--No empty weight, self-referencing nodes. Nodes must be non-negative. They must fit within the bounds.
@@ -46,10 +45,7 @@ EdgeWeight ListGraph::weight(NodeID u, NodeID v) const{
 }
 
 std::list<NWPair> ListGraph::getAdj(NodeID u) const{
-	//Validity checks
-	//if (u >= 0 && u < edgeList.size()){
-			return edgeList.at(u);
-	//}
+		return edgeList.at(u);
 }
 
 unsigned ListGraph::degree(NodeID u) const{
