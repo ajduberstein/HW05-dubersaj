@@ -23,6 +23,8 @@ std::pair<std::vector<NodeID>, EdgeWeight> TSP(Graph* G){
 				break;
 			}
 		}
+		//Add the weight of the edge of the last node to the first node
+		tmp_len+=G->weight(nodes[0],nodes[num_nodes-1]);
 		//If we have a new minimum (not on the first try), then copy it as such and load up the list
 		if (tmp_len < shortest_len || shortest_len == 0){
 			shortest_len = tmp_len;
